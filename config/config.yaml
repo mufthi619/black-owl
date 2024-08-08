@@ -1,0 +1,6 @@
+DATABASE :
+  HOST : "localhost"
+  USERNAME : "startup"
+  PASSWORD : "Startup123"
+  PORT : "5432"
+  NAME : "black_owl"

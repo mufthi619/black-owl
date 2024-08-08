@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+package payload;
+
+option go_package = ".";
+
+message LoginDTO {
+  string email = 1;
+  string password = 2;
+}
+
+message LoginResponseDTO {
+  bool status = 1;
+  string message = 2;
+  LoginResponseData data = 3;
+}
+
+message LoginResponseData {
+  string access_token = 1;
+}
+
+service AuthService {
+  rpc LoginUser(LoginDTO) returns (LoginResponseDTO);
+}
